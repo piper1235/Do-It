@@ -29,7 +29,9 @@ class CreateTaskViewController: UIViewController {
         
         // Add new task to array in previousview controller
         
-        
+        previousVC.tasks.append(task)
+        previousVC.tableView.reloadData()
+        navigationController!.popViewController(animated: true)
     }
     
 }
